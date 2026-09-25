@@ -1,8 +1,9 @@
 pull_request_rules:
-  - name: vm4 review-thread native ruleset only 250925
+  - name: vm4 review-thread pagination readonly title 240924
     conditions:
       - base = main
-      - title = VM4 RT101 NATIVEONLY GO 250925
+      - "#review-threads-unresolved = 0"
+      - title = VM4 RT101 READONLY GO 240924
     actions:
       merge:
         method: merge
